@@ -32,7 +32,6 @@ install:
       conda config --set show_channel_urls true
       conda install --yes --quiet conda-forge-build-setup
       source run_conda_forge_build_setup
-      conda install --yes conda-build=1.21.7  # revert conda-build to 1.21.7, to get ObsPy 1.0.2 built, see conda-forge/staged-recipes#582
 
 script:
   - conda build ./recipe
