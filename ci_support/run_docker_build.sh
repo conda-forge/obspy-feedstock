@@ -41,6 +41,9 @@ conda clean --lock
 conda install --yes --quiet conda-forge-build-setup
 source run_conda_forge_build_setup
 
+# revert conda-build to 1.21.7, to get ObsPy 1.0.2 built, see conda-forge/staged-recipes#582
+conda install --yes conda-build=1.21.7
+
 # Embarking on 3 case(s).
     set -x
     export CONDA_PY=27
