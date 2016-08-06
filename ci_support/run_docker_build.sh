@@ -41,6 +41,9 @@ conda clean --lock
 conda install --yes --quiet conda-forge-build-setup
 source run_conda_forge_build_setup
 
+# test to build ObsPy against current conda-build branch 1.21.x, see conda/conda-build#1167
+pip install https://github.com/conda/conda-build/archive/a816fcf0834f7b45c7e30fc65f027e8f8d2d5cd5.zip
+
 # Embarking on 3 case(s).
     set -x
     export CONDA_PY=27
