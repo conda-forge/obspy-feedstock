@@ -15,7 +15,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
   script: python setup.py install --single-version-externally-managed --record record.txt
@@ -43,10 +43,10 @@ requirements:
     - sqlalchemy
     - requests
     - decorator
+    - mock  # [py2k]
 
 test:
   requires:
-    - mock  # [py2k]
     - flake8
   imports:
     - obspy
