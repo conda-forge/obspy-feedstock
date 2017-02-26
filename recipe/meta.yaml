@@ -30,6 +30,8 @@ requirements:
     - sqlalchemy
     - requests
     - decorator
+    # there's a packaging problem with icu, see obspy/obspy#1677
+    - icu <58
   run:
     - python
     - setuptools
@@ -42,6 +44,8 @@ requirements:
     - requests
     - decorator
     - mock  # [py2k]
+    # there's a packaging problem with icu, see obspy/obspy#1677
+    - icu <58
 
 test:
   requires:
@@ -49,6 +53,8 @@ test:
     # the pinning of matplotlib for tests should be removed for later commits
     # after merging obspy/obspy#1616
     - matplotlib 1.5.*
+    # there's a packaging problem with icu, see obspy/obspy#1677
+    - icu <58
   imports:
     - obspy
     - obspy.io.mseed
