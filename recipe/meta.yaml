@@ -25,27 +25,31 @@ requirements:
     - future
     - numpy
     - scipy
-    - matplotlib
+    # the pinning of matplotlib for tests should be removed for later commits
+    # after merging obspy/obspy#1616
+    - matplotlib 1.5.*
     - lxml
     - sqlalchemy
     - requests
     - decorator
     # there's a packaging problem with icu, see obspy/obspy#1677
-    - icu <58
+    - icu 58.*
   run:
     - python
     - setuptools
     - future
     - numpy
     - scipy
-    - matplotlib
+    # the pinning of matplotlib for tests should be removed for later commits
+    # after merging obspy/obspy#1616
+    - matplotlib 1.5.*
     - lxml
     - sqlalchemy
     - requests
     - decorator
     - mock  # [py2k]
     # there's a packaging problem with icu, see obspy/obspy#1677
-    - icu <58
+    - icu 58.*
 
 test:
   requires:
@@ -54,7 +58,7 @@ test:
     # after merging obspy/obspy#1616
     - matplotlib 1.5.*
     # there's a packaging problem with icu, see obspy/obspy#1677
-    - icu <58
+    - icu 58.*
   imports:
     - obspy
     - obspy.io.mseed
