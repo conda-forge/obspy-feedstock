@@ -1,6 +1,5 @@
-{% set version = "1.0.2" %}
-{% set sha256 = "37d563e36a44a5309b2f53b394d7391d49c8a62b0e8d0f0d13f54ea4e2943230" %}
-# {% set md5 = "b1432aa11b6d244c4fac61737c0c9d95" %}
+{% set version = "1.0.3" %}
+{% set sha256 = "7170c7427471f978f7a7b0fe61c2bfb7094c59b3859cd8d5d5bbae6380cc20a5" %}
 
 package:
   name: obspy
@@ -8,14 +7,13 @@ package:
 
 source:
   fn: obspy-{{ version }}.zip
-  url: https://pypi.io/packages/source/o/obspy/obspy-1.0.2.zip
+  url: https://pypi.io/packages/source/o/obspy/obspy-1.0.3.zip
+  # url: https://github.com/obspy/obspy/files/796697/obspy-1.0.3rc1.zip
   sha256: {{ sha256 }}
-#  url: https://www.geophysik.uni-muenchen.de/%7Emegies/obspy-{{ version }}.zip
-#  md5: {{ md5 }}
 
 
 build:
-  number: 1
+  number: 0
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
   script: python setup.py install --single-version-externally-managed --record record.txt
@@ -27,27 +25,40 @@ requirements:
     - future
     - numpy
     - scipy
-    - matplotlib
+    # the pinning of matplotlib for tests should be removed for later commits
+    # after merging obspy/obspy#1616
+    - matplotlib 1.5.*
     - lxml
     - sqlalchemy
     - requests
     - decorator
+    # there's a packaging problem with icu, see obspy/obspy#1677
+    - icu 58.*
   run:
     - python
     - setuptools
     - future
     - numpy
     - scipy
-    - matplotlib
+    # the pinning of matplotlib for tests should be removed for later commits
+    # after merging obspy/obspy#1616
+    - matplotlib 1.5.*
     - lxml
     - sqlalchemy
     - requests
     - decorator
     - mock  # [py2k]
+    # there's a packaging problem with icu, see obspy/obspy#1677
+    - icu 58.*
 
 test:
   requires:
     - flake8
+    # the pinning of matplotlib for tests should be removed for later commits
+    # after merging obspy/obspy#1616
+    - matplotlib 1.5.*
+    # there's a packaging problem with icu, see obspy/obspy#1677
+    - icu 58.*
   imports:
     - obspy
     - obspy.io.mseed
