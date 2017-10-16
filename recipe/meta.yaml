@@ -58,6 +58,11 @@ test:
     - obspy.io.mseed
   commands:
     - python -c "from obspy import read;"
+    # test at least a few executables that should've bben installed
+    - obspy-print -h
+    - obspy-plot -h
+    - obspy-runtests -h
+    - obspy-scan -h
 
 about:
   home: https://obspy.org
