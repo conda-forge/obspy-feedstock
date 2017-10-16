@@ -53,6 +53,7 @@ test:
     # the pinning of matplotlib for tests should be removed for later commits
     # after merging obspy/obspy#1616
     - matplotlib 1.5.*
+    - pyshp
   imports:
     - obspy
     - obspy.io.mseed
