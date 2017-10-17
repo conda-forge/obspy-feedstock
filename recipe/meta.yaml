@@ -25,9 +25,7 @@ requirements:
     - future
     - numpy
     - scipy
-    # the pinning of matplotlib for tests should be removed for later commits
-    # after merging obspy/obspy#1616
-    - matplotlib 1.5.*
+    - matplotlib
     - lxml
     - sqlalchemy
     - requests
@@ -38,9 +36,7 @@ requirements:
     - future
     - numpy
     - scipy
-    # the pinning of matplotlib for tests should be removed for later commits
-    # after merging obspy/obspy#1616
-    - matplotlib 1.5.*
+    - matplotlib
     - lxml
     - sqlalchemy
     - requests
@@ -50,9 +46,7 @@ requirements:
 test:
   requires:
     - flake8
-    # the pinning of matplotlib for tests should be removed for later commits
-    # after merging obspy/obspy#1616
-    - matplotlib 1.5.*
+    - matplotlib
     - pyshp
   imports:
     - obspy
