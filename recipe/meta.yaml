@@ -43,12 +43,14 @@ requirements:
     - requests
     - decorator
     - mock  # [py2k]
+    - basemap
 
 test:
   requires:
     - flake8
     - matplotlib
     - pyshp
+    - basemap
   imports:
     - obspy
     - obspy.io.mseed
