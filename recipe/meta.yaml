@@ -11,6 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  skip: True  # [not py37]
   number: 1
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
