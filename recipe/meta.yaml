@@ -18,7 +18,10 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
+    - pip
     - setuptools
     - future
     - numpy
@@ -28,8 +31,6 @@ requirements:
     - sqlalchemy
     - requests
     - decorator
-  host:
-    - pip
   run:
     - python
     - setuptools
