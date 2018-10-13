@@ -9,6 +9,11 @@ Feedstock license: BSD 3-Clause
 
 Summary: ObsPy: A Python Toolbox for seismology/seismological observatories.
 
+ObsPy is an open-source project dedicated to provide a Python framework for
+processing seismological data. It provides parsers for common file formats,
+clients to access data centers and seismological signal processing routines
+which allow the manipulation of seismological time series (see Beyreuther
+et al. 2010, Megies et al. 2011, Krischer et al. 2015).
 
 
 Current build status
