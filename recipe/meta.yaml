@@ -41,12 +41,14 @@ requirements:
     - requests
     - decorator
     - mock  # [py2k]
+    - cartopy
 
 test:
   requires:
     - flake8
     - matplotlib
     - pyshp
+    - cartopy
   imports:
     - obspy
     - obspy.io.mseed
