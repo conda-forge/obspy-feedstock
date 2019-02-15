@@ -45,6 +45,11 @@ requirements:
     - decorator
     - mock  # [py2k]
     - basemap
+    # pyproj is a dep of basemap so it does not hurt to include it as dep right
+    # now
+    # dodge proj4 v5 for now, see obspy/obspy#2283
+    - pyproj
+    - proj4 <5
 
 test:
   requires:
