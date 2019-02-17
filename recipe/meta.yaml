@@ -1,5 +1,5 @@
-{% set version = "1.1.0" %}
-{% set sha256 = "ef48b4e52a8166c35c46775b523899ffaa00658018822103e1ad9f5008050d61" %}
+{% set version = "1.1.1" %}
+{% set sha256 = "14e7ff1b87c2cb901f3a6bebb64cbc5e8d624a067319c242b55cf77c341018fc" %}
 
 package:
   name: obspy
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
+  number: 0
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
   script: python setup.py install --single-version-externally-managed --record record.txt
