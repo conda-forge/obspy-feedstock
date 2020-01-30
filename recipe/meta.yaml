@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 2
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
@@ -63,10 +63,10 @@ test:
   commands:
     - python -c "from obspy import read;"
     # test at least a few executables that should've bben installed
-    - obspy-print -h
-    - obspy-plot -h
-    - obspy-runtests -h
-    - obspy-scan -h
+    - obspy-print -h  # [not win]
+    - obspy-plot -h  # [not win]
+    - obspy-runtests -h  # [not win]
+    - obspy-scan -h  # [not win]
 
 about:
   home: https://obspy.org
