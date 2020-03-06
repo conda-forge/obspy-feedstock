@@ -1,5 +1,5 @@
-{% set version = "1.1.1" %}
-{% set sha256 = "14e7ff1b87c2cb901f3a6bebb64cbc5e8d624a067319c242b55cf77c341018fc" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "b5956d21ecaffd954cbdff93129b8f571361b0f326203b99c5b57e0cd82b7f86" %}
 
 package:
   name: obspy
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
   script: python setup.py install --single-version-externally-managed --record record.txt
@@ -72,7 +72,7 @@ about:
   home: https://obspy.org
   license: LGPLv3
   license_file: LICENSE.txt
-  summary: "ObsPy: A Python Toolbox for seismology/seismological observatories."
+  summary: 'ObsPy: A Python Toolbox for seismology/seismological observatories.'
   description: |
     ObsPy is an open-source project dedicated to provide a Python framework for
     processing seismological data. It provides parsers for common file formats,
