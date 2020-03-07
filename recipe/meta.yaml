@@ -1,5 +1,5 @@
-{% set version = "1.1.1" %}
-{% set sha256 = "14e7ff1b87c2cb901f3a6bebb64cbc5e8d624a067319c242b55cf77c341018fc" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "b5956d21ecaffd954cbdff93129b8f571361b0f326203b99c5b57e0cd82b7f86" %}
 
 package:
   name: obspy
@@ -8,14 +8,14 @@ package:
 source:
   fn: obspy-{{ version }}.zip
   url: https://pypi.io/packages/source/o/obspy/obspy-{{ version }}.zip
-  # url: https://github.com/obspy/obspy/files/2872202/obspy-1.1.1rc4.zip
+  # url: https://github.com/obspy/obspy/files/4297596/obspy-1.2.0rc9.zip
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
@@ -27,7 +27,7 @@ requirements:
     - future
     - numpy
     - scipy
-    - matplotlib
+    - matplotlib-base
     - lxml
     - sqlalchemy
     - requests
@@ -38,7 +38,7 @@ requirements:
     - future
     - numpy <1.16
     - scipy
-    - matplotlib
+    - matplotlib-base
     - lxml
     - sqlalchemy
     - requests
@@ -49,12 +49,12 @@ requirements:
     # now
     # dodge proj4 v5 for now, see obspy/obspy#2283
     - pyproj
-    - proj4 <5
+    - proj4 !=5
 
 test:
   requires:
     - flake8
-    - matplotlib
+    - matplotlib-base
     - pyshp
     - basemap
   imports:
@@ -63,10 +63,10 @@ test:
   commands:
     - python -c "from obspy import read;"
     # test at least a few executables that should've bben installed
-    - obspy-print -h
-    - obspy-plot -h
-    - obspy-runtests -h
-    - obspy-scan -h
+    - obspy-print -h  # [not win]
+    - obspy-plot -h  # [not win]
+    - obspy-runtests -h  # [not win]
+    - obspy-scan -h  # [not win]
 
 about:
   home: https://obspy.org
