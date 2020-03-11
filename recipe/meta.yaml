@@ -36,7 +36,7 @@ requirements:
     - python
     - setuptools
     - future
-    - numpy <1.16
+    - numpy
     - scipy
     - matplotlib-base
     - lxml
