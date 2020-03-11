@@ -32,6 +32,7 @@ requirements:
     - sqlalchemy
     - requests
     - decorator
+    - pkginfo <1.5  # [win]
   run:
     - python
     - setuptools
