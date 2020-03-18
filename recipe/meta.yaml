@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
@@ -45,11 +45,6 @@ requirements:
     - decorator
     - mock  # [py2k]
     - basemap
-    # pyproj is a dep of basemap so it does not hurt to include it as dep right
-    # now
-    # dodge proj4 v5 for now, see obspy/obspy#2283
-    - pyproj
-    - proj4 !=5
 
 test:
   requires:
