@@ -44,14 +44,14 @@ requirements:
     - requests
     - decorator
     - mock  # [py2k]
-    - basemap
+    - cartopy
 
 test:
   requires:
     - flake8
     - matplotlib-base
     - pyshp
-    - basemap
+    - cartopy
   imports:
     - obspy
     - obspy.io.mseed
