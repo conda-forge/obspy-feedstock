@@ -1,5 +1,5 @@
-{% set version = "1.2.1" %}
-{% set sha256 = "b04152950827534e91a625afa09f9390caabce4f96adbe4571b39a832ca3e423" %}
+{% set version = "1.2.2rc1" %}
+{% set sha256 = "9ff33b3f52b78a05e718a53df479132ab609f1f4771e287ada049bd4d9847667" %}
 
 package:
   name: obspy
@@ -7,12 +7,12 @@ package:
 
 source:
   fn: obspy-{{ version }}.zip
-  url: https://pypi.io/packages/source/o/obspy/obspy-{{ version }}.zip
-  # url: https://github.com/obspy/obspy/files/4297596/obspy-1.2.0rc9.zip
+  # url: https://pypi.io/packages/source/o/obspy/obspy-{{ version }}.zip
+  url: https://github.com/obspy/obspy/files/4845195/obspy-1.2.2rc1.zip
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   preserve_egg_dir: yes
   detect_binary_files_with_prefix: true
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
