@@ -64,7 +64,7 @@ test:
 
 about:
   home: https://obspy.org
-  license: LGPLv3
+  license: LGPL-3.0-only
   license_file: LICENSE.txt
   summary: 'ObsPy: A Python Toolbox for seismology/seismological observatories.'
   description: |
