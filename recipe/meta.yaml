@@ -12,10 +12,23 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   preserve_egg_dir: yes
-  detect_binary_files_with_prefix: true
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  entry_points:
+    - obspy-flinn-engdahl = obspy.scripts.flinnengdahl:main
+    - obspy-runtests = obspy.scripts.runtests:main
+    - obspy-reftek-rescue = obspy.scripts.reftekrescue:main
+    - obspy-print = obspy.scripts._print:main
+    - obspy-sds-report = obspy.scripts.sds_html_report:main
+    - obspy-indexer = obspy.db.scripts.indexer:main
+    - obspy-scan = obspy.imaging.scripts.scan:main
+    - obspy-plot = obspy.imaging.scripts.plot:main
+    - obspy-mopad = obspy.imaging.scripts.mopad:main
+    - obspy-mseed-recordanalyzer = obspy.io.mseed.scripts.recordanalyzer:main
+    - obspy-dataless2xseed = obspy.io.xseed.scripts.dataless2xseed:main
+    - obspy-xseed2dataless = obspy.io.xseed.scripts.xseed2dataless:main
+    - obspy-dataless2resp = obspy.io.xseed.scripts.dataless2resp:main
 
 requirements:
   build:
