@@ -60,7 +60,6 @@ requirements:
     - sqlalchemy
     - requests
     - decorator
-    - mock  # [py2k]
 
 test:
   requires:
