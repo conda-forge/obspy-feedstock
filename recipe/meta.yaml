@@ -41,7 +41,6 @@ requirements:
     - python
     - pip
     - setuptools
-    - future
     - numpy
     - scipy
     - matplotlib-base
@@ -52,7 +51,6 @@ requirements:
   run:
     - python
     - setuptools
-    - future
     - numpy >=1.15.0
     - scipy >=1.0.0
     - matplotlib-base >=3.2.0
