@@ -62,7 +62,7 @@ requirements:
 test:
   requires:
     - pytest
-    - pytest-json-report
+    - pytest-json-report >=1.4
     - packaging
     - pyproj
     - flake8
