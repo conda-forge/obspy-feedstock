@@ -21,6 +21,8 @@ os.environ['OBSPY_NODE_NAME'] = 'conda-forge'
 # inject '--report' into command line args, since it seems we can't request it
 # programmatically anymore with new test setup
 sys.argv.insert(1, '--report')
+# run tests verbose
+sys.argv.insert(1, '-v')
 
 # run tests and send test report
 run_tests()
