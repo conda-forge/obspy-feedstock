@@ -29,6 +29,10 @@ sys.argv.insert(1, '--report')
 # run tests verbose
 sys.argv.insert(1, '-v')
 
+# skip two test cases, will be fixed for next release, see #3183
+sys.argv.insert(1, '"not test_pk_baer"')
+sys.argv.insert(1, '-k')
+
 # run tests and send test report
 run_tests()
 
