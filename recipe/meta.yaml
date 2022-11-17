@@ -52,7 +52,7 @@ requirements:
     - requests
     - decorator
   run:
-    - python >=3.8
+    - python
     - setuptools
     - numpy >=1.20
     - scipy >=1.7
