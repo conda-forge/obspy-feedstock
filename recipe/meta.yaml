@@ -51,11 +51,11 @@ requirements:
     - requests
     - decorator
   run:
-    - python
+    - python >=3.8
     - setuptools
-    - numpy >=1.15.0
-    - scipy >=1.0.0
-    - matplotlib-base >=3.2.0
+    - numpy >=1.20
+    - scipy >=1.7
+    - matplotlib-base >=3.3
     - lxml
     - sqlalchemy
     - requests
