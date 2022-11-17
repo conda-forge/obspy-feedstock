@@ -60,8 +60,6 @@ requirements:
     - sqlalchemy
     - requests
     - decorator
-    # see https://github.com/obspy/obspy/issues/2984#issuecomment-1063161646
-    - libffi <3.4  # [linux64 and py==38]
 
 test:
   requires:
