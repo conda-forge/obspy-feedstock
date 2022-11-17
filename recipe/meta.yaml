@@ -25,7 +25,6 @@ build:
     - obspy-reftek-rescue = obspy.scripts.reftekrescue:main
     - obspy-print = obspy.scripts._print:main
     - obspy-sds-report = obspy.scripts.sds_html_report:main
-    - obspy-indexer = obspy.db.scripts.indexer:main
     - obspy-scan = obspy.imaging.scripts.scan:main
     - obspy-plot = obspy.imaging.scripts.plot:main
     - obspy-mopad = obspy.imaging.scripts.mopad:main
