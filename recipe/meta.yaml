@@ -1,6 +1,6 @@
 # SEE https://github.com/conda-forge/obspy-feedstock/issues/50
-{% set version = "1.4.0rc2" %}
-{% set sha256 = "0eec75180f96853c7273fc57e3e65a60bf9b0f52c65df09e8786987ca4693c75" %}
+{% set version = "1.4.0rc3" %}
+{% set sha256 = "25cf80470ba8149a19321f93c5fbb21befa1dd81028e6051c0fb22ed53ce45bf" %}
 
 package:
   name: obspy
