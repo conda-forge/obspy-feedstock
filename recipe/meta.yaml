@@ -15,7 +15,7 @@ build:
   # skip pypy builds for now
   # https://conda-forge.org/blog/posts/2020-03-10-pypy/
   # https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=pypy
-  skip: True  # [python_impl == 'pypy']
+  skip: true  # [python_impl == 'pypy']
   number: 0
   preserve_egg_dir: yes
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
