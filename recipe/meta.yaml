@@ -17,14 +17,14 @@ build:
   # https://conda-forge.org/blog/posts/2020-03-10-pypy/
   # https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=pypy
   skip: True  # [python_impl == 'pypy']
-  number: 0
+  number: 1
   preserve_egg_dir: yes
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - obspy-flinn-engdahl = obspy.scripts.flinnengdahl:main
     - obspy-runtests = obspy.scripts.runtests:main
     - obspy-reftek-rescue = obspy.scripts.reftekrescue:main
-    - obspy-print = obspy.scripts._print:main
+    - obspy-print = obspy.scripts.print:main
     - obspy-sds-report = obspy.scripts.sds_html_report:main
     - obspy-scan = obspy.imaging.scripts.scan:main
     - obspy-plot = obspy.imaging.scripts.plot:main
