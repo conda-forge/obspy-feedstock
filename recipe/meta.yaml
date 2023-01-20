@@ -16,7 +16,7 @@ build:
   # https://conda-forge.org/blog/posts/2020-03-10-pypy/
   # https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=pypy
   skip: True  # [python_impl == 'pypy']
-  number: 0
+  number: 2
   preserve_egg_dir: yes
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
@@ -57,7 +57,7 @@ requirements:
     - scipy >=1.7
     - matplotlib-base >=3.3
     - lxml
-    - sqlalchemy
+    - sqlalchemy <2.0
     - requests
     - decorator
 
