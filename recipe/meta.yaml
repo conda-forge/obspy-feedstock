@@ -58,7 +58,7 @@ requirements:
     - scipy >=1.7
     - matplotlib-base >=3.3,<3.9
     - lxml
-    - sqlalchemy <2.0
+    - sqlalchemy >=1.4
     - requests
     - decorator
 
