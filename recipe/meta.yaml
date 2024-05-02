@@ -16,7 +16,7 @@ build:
   # https://conda-forge.org/blog/posts/2020-03-10-pypy/
   # https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=pypy
   skip: True  # [python_impl == 'pypy']
-  number: 2
+  number: 3
   preserve_egg_dir: yes
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
@@ -39,6 +39,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
