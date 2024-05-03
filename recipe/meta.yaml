@@ -1,5 +1,5 @@
-{% set version = "1.4.0" %}
-{% set sha256 = "336a6e1d9a485732b08173cb5dc1dd720a8e53f3b54c180a62bb8ceaa5fe5c06" %}
+{% set version = "1.4.1" %}
+{% set sha256 = "9cf37b0ce03de43d80398703c006bfddbd709f32e8460a9404b27df998d3f747" %}
 
 package:
   name: obspy
@@ -8,7 +8,7 @@ package:
 source:
   fn: obspy-{{ version }}.zip
   url: https://pypi.io/packages/source/o/obspy/obspy-{{ version }}.tar.gz
-    # url: https://test.pypi.io/packages/source/o/obspy/obspy-{{ version }}.tar.gz
+  #url: https://test.pypi.io/packages/source/o/obspy/obspy-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -16,7 +16,7 @@ build:
   # https://conda-forge.org/blog/posts/2020-03-10-pypy/
   # https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=pypy
   skip: True  # [python_impl == 'pypy']
-  number: 2
+  number: 0
   preserve_egg_dir: yes
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
@@ -39,6 +39,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
