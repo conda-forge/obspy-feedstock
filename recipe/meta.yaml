@@ -1,5 +1,5 @@
-{% set version = "1.4.1rc1" %}
-{% set sha256 = "41b65dcfc4634cd923fa347071f793e5a9ff99183d8d4ee4377fc0296831df64" %}
+{% set version = "1.4.1" %}
+{% set sha256 = "336a6e1d9a485732b08173cb5dc1dd720a8e53f3b54c180a62bb8ceaa5fe5c06" %}
 
 package:
   name: obspy
@@ -7,8 +7,8 @@ package:
 
 source:
   fn: obspy-{{ version }}.zip
-    #url: https://pypi.io/packages/source/o/obspy/obspy-{{ version }}.tar.gz
-  url: https://test.pypi.io/packages/source/o/obspy/obspy-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/o/obspy/obspy-{{ version }}.tar.gz
+  #url: https://test.pypi.io/packages/source/o/obspy/obspy-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
