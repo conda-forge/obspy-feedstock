@@ -54,6 +54,8 @@ requirements:
   run:
     - python
     - setuptools
+    # XXX when unpinning numpy <2 also need to delete the pinning for tests
+    # XXX below
     - numpy >=1.20,<2
     - scipy >=1.7
     - matplotlib-base >=3.3
@@ -72,6 +74,9 @@ test:
     - matplotlib-base
     - pyshp
     - cartopy
+    # XXX not sure why we need to specify numpy <2 here too, when already above
+    # XXX we specify that the package needs numpy <2 to run
+    - numpy <2
   imports:
     - obspy
     - obspy.io.mseed
