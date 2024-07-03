@@ -37,14 +37,14 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy <2                               # [build_platform != target_platform]
+    - numpy <2.0dev0                         # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
     - pip
     - setuptools
-    - numpy <2
+    - numpy <2.0dev0
     - scipy
     - matplotlib-base
     - lxml
@@ -54,7 +54,7 @@ requirements:
   run:
     - python
     - setuptools
-    - numpy >=1.20,<2
+    - numpy >=1.20,<2.0dev0
     - scipy >=1.7
     - matplotlib-base >=3.3
     - lxml
