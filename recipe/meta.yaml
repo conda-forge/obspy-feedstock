@@ -1,5 +1,5 @@
-{% set version = "1.4.1" %}
-{% set sha256 = "9cf37b0ce03de43d80398703c006bfddbd709f32e8460a9404b27df998d3f747" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" %}
 
 package:
   name: obspy
@@ -16,7 +16,7 @@ build:
   # https://conda-forge.org/blog/posts/2020-03-10-pypy/
   # https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=pypy
   skip: True  # [python_impl == 'pypy']
-  number: 3
+  number: 0
   preserve_egg_dir: yes
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
@@ -37,16 +37,16 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy <2.0dev0                         # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
     - pip
     - setuptools
-    - numpy <2.0dev0
+    - numpy
     - scipy
-    - matplotlib-base <3.9
+    - matplotlib-base
     - lxml
     - sqlalchemy
     - requests
@@ -54,11 +54,11 @@ requirements:
   run:
     - python
     - setuptools
-    - numpy >=1.20,<2.0dev0
+    - numpy >=1.20
     - scipy >=1.7
-    - matplotlib-base >=3.3,<3.9
+    - matplotlib-base >=3.3
     - lxml
-    - sqlalchemy <2.0
+    - sqlalchemy >=1.4
     - requests
     - decorator
 
