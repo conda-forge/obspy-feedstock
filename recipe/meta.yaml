@@ -72,7 +72,9 @@ test:
     - pyproj
     - flake8
     - matplotlib-base
-    - pyshp
+    # remove version pin on new obspy release
+    # see obspy/obspy#3599
+    - pyshp <3
     - cartopy
   imports:
     - obspy
