@@ -16,7 +16,7 @@ build:
   # https://conda-forge.org/blog/posts/2020-03-10-pypy/
   # https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=pypy
   skip: True  # [python_impl == 'pypy']
-  number: 2
+  number: 3
   preserve_egg_dir: yes
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
@@ -53,7 +53,9 @@ requirements:
     - decorator
   run:
     - python
-    - setuptools
+    # remove version pin on new obspy release
+    # see obspy/obspy#3681 and obspy/obspy#3333
+    - setuptools <82
     - numpy >=1.20
     - scipy >=1.7
     - matplotlib-base >=3.3
@@ -70,7 +72,9 @@ test:
     - pyproj
     - flake8
     - matplotlib-base
-    - pyshp
+    # remove version pin on new obspy release
+    # see obspy/obspy#3599
+    - pyshp <3
     - cartopy
   imports:
     - obspy
