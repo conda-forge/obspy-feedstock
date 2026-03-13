@@ -7,7 +7,7 @@ package:
 
 source:
   fn: obspy-{{ version }}.zip
-  url: https://pypi.io/packages/source/o/obspy/obspy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/o/obspy/obspy-{{ version }}.tar.gz
   #url: https://test.pypi.io/packages/source/o/obspy/obspy-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
