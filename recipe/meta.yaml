@@ -1,5 +1,5 @@
-{% set version = "1.5.1rc2" %}
-{% set sha256 = "568ceab2c215a2dc8a47acd82a29af81fb257704bfc64f8aa223a69bd3330e79" %}
+{% set version = "1.5.1rc3" %}
+{% set sha256 = "a523803ebd0d28aa294a268f9ae353d0c3ac9eaf917b450a0d257a7727337de1" %}
 
 package:
   name: obspy
