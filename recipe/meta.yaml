@@ -1,5 +1,5 @@
-{% set version = "1.5.0" %}
-{% set sha256 = "88202d8a616dbe789a6c35bbf86d1008dd1b78b300cde92174a9d76d00af666e" %}
+{% set version = "1.5.1" %}
+{% set sha256 = "95990a0b052b6d436b91cb6ee9f1f27ce302cc553818006ec88ed03c272e8c54" %}
 
 package:
   name: obspy
@@ -16,7 +16,7 @@ build:
   # https://conda-forge.org/blog/posts/2020-03-10-pypy/
   # https://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=pypy
   skip: True  # [python_impl == 'pypy']
-  number: 1
+  number: 0
   preserve_egg_dir: yes
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
